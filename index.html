@@ -457,6 +457,7 @@
       color: var(--dim);
       max-width: 500px;
       margin-bottom: 2.5rem;
+      text-wrap: balance;
     }
 
     .lineup-grid {
@@ -490,6 +491,34 @@
       color: var(--amber);
       line-height: 1.6;
     }
+
+    /* ── SIGNUP ───────────────────────────────────────── */
+    .signup-section { background: var(--bg-deep); }
+
+    .signup-inner {
+      max-width: 600px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .signup-headline {
+      font-family: var(--font-disp);
+      font-size: clamp(2.5rem, 8vw, 4rem);
+      font-weight: 900;
+      text-transform: uppercase;
+      line-height: 0.9;
+      margin-bottom: 1.25rem;
+    }
+
+    .signup-body {
+      font-size: 1rem;
+      line-height: 1.75;
+      color: var(--muted);
+      margin-bottom: 2rem;
+      text-wrap: balance;
+    }
+
+    .signup-form { max-width: 480px; margin: 0 auto; }
 
     /* ── FOOTER ───────────────────────────────────────── */
     footer {
@@ -609,7 +638,8 @@
         <span class="events-venue">
           <a href="https://maps.google.com/?q=2819+Nicollet+Ave+Minneapolis+MN+55408" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: underline; text-underline-offset: 3px;">Eat Street Crossing</a> &bull; Mpls<br>
           <span style="font-weight: 400; letter-spacing: 0.1em; color: var(--faint);">2819 Nicollet Ave, Minneapolis, MN 55408</span>
-        </span>      </div>
+        </span>
+      </div>
 
       <article class="event-card">
         <div class="event-date" aria-label="May 17">
@@ -653,6 +683,20 @@
             </div>
           </div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="rule"/>
+
+  <!-- EMAIL SIGNUP -->
+  <section class="signup-section">
+    <div class="signup-inner fade-up">
+      <p class="eyebrow">Stay In The Loop</p>
+      <h2 class="signup-headline">Get The Word<br>Before Anyone Else.</h2>
+      <p class="signup-body">Event announcements, lineup drops, and Camp DayFunk updates delivered straight to your inbox.</p>
+      <div class="signup-form">
+        <script async src="https://eocampaign1.com/form/c6abd42a-38c2-11f1-85c4-89c64abbe1fb.js" data-form="c6abd42a-38c2-11f1-85c4-89c64abbe1fb"></script>
       </div>
     </div>
   </section>
