@@ -8,21 +8,24 @@
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700;900&family=Playfair+Display:ital@1&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet"/>
+  <link rel="icon" type="image/x-icon" href="favicon.ico"/>
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png"/>
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon-180.png"/>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --bg:        #1a1208;
-      --bg-deep:   #100e05;
-      --bg-mid:    #211508;
-      --rule:      #2e2010;
-      --text:      #f5ead8;
-      --muted:     #b89060;
-      --dim:       #6b5030;
-      --faint:     #3a2810;
+      --bg:        #fdf6ec;
+      --bg-deep:   #f5ead8;
+      --bg-mid:    #faeedd;
+      --rule:      #e0cdb0;
+      --text:      #1a1208;
+      --muted:     #5a4020;
+      --dim:       #8a6840;
+      --faint:     #c8aa80;
       --orange:    #e8610a;
-      --amber:     #e8a840;
-      --green:     #3b8040;
+      --amber:     #c87800;
+      --green:     #2a6830;
       --navy:      #1a4080;
       --red:       #cc1800;
       --font-disp: 'Barlow Condensed', sans-serif;
@@ -67,7 +70,7 @@
       content: '';
       position: absolute;
       inset: 0;
-      background: radial-gradient(ellipse 90% 60% at 50% 45%, rgba(180,110,30,0.10) 0%, transparent 70%);
+      background: radial-gradient(ellipse 90% 60% at 50% 45%, rgba(232,97,10,0.07) 0%, transparent 70%);
       pointer-events: none;
     }
 
@@ -83,9 +86,7 @@
       width: 100%;
       height: auto;
       display: block;
-      /* Knock out the light blue t-shirt bg as best we can */
-      mix-blend-mode: screen;
-      filter: brightness(1.05) contrast(1.1);
+      mix-blend-mode: multiply;
     }
 
     @keyframes float {
@@ -110,7 +111,6 @@
     }
     .ticker-wrap::before { left: 0;  background: linear-gradient(to right, var(--bg), transparent); }
     .ticker-wrap::after  { right: 0; background: linear-gradient(to left,  var(--bg), transparent); }
-
     .ticker-track {
       display: flex;
       width: max-content;
@@ -407,7 +407,7 @@
       font-size: clamp(12rem, 30vw, 22rem);
       font-weight: 900;
       text-transform: uppercase;
-      color: #181400;
+      color: #e8d8c0;
       line-height: 1;
       pointer-events: none;
       user-select: none;
