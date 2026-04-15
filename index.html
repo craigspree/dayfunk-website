@@ -248,11 +248,15 @@
 
     .pillars {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(2, 1fr);
       gap: 1px;
       background: var(--rule);
       border: 1px solid var(--rule);
       margin-top: 3rem;
+    }
+
+    .pillar:last-child {
+      grid-column: 1 / -1;
     }
 
     .pillar {
@@ -514,6 +518,7 @@
     /* ── 640px ────────────────────────────────────────── */
     @media (min-width: 640px) {
       .pillars { grid-template-columns: repeat(5, 1fr); }
+      .pillar:last-child { grid-column: auto; }
       .logo-wrap { width: min(320px, 55vw); }
     }
 
