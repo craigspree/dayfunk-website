@@ -1,0 +1,62 @@
+# ── Cloudflare Pages _headers ──────────────────────────────────────────────
+# Applied to every response unless overridden by a more specific rule below.
+
+/*
+  # Prevent clickjacking
+  X-Frame-Options: SAMEORIGIN
+  # Block MIME-type sniffing
+  X-Content-Type-Options: nosniff
+  # Enable basic XSS protection in older browsers
+  X-XSS-Protection: 1; mode=block
+  # Only send referrer on same origin
+  Referrer-Policy: strict-origin-when-cross-origin
+  # Restrict powerful browser features
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
+
+# ── HTML: short cache, always revalidate ───────────────────────────────────
+# Browsers will check for a new version before using a cached copy.
+/*.html
+  Cache-Control: public, max-age=0, must-revalidate
+
+/
+  Cache-Control: public, max-age=0, must-revalidate
+
+# ── Fonts: cache for 1 year (content-hashed by Google) ────────────────────
+/*.woff2
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.woff
+  Cache-Control: public, max-age=31536000, immutable
+
+# ── Images: cache for 1 week, revalidate after ────────────────────────────
+/*.png
+  Cache-Control: public, max-age=604800, stale-while-revalidate=86400
+
+/*.jpg
+  Cache-Control: public, max-age=604800, stale-while-revalidate=86400
+
+/*.jpeg
+  Cache-Control: public, max-age=604800, stale-while-revalidate=86400
+
+/*.webp
+  Cache-Control: public, max-age=604800, stale-while-revalidate=86400
+
+/*.ico
+  Cache-Control: public, max-age=604800, stale-while-revalidate=86400
+
+/*.svg
+  Cache-Control: public, max-age=604800, stale-while-revalidate=86400
+
+# ── CSS / JS: cache for 1 week ─────────────────────────────────────────────
+/*.css
+  Cache-Control: public, max-age=604800, stale-while-revalidate=86400
+
+/*.js
+  Cache-Control: public, max-age=604800, stale-while-revalidate=86400
+
+# ── Sitemap and robots: short cache ────────────────────────────────────────
+/sitemap.xml
+  Cache-Control: public, max-age=86400
+
+/robots.txt
+  Cache-Control: public, max-age=86400

@@ -1,0 +1,3 @@
+# ── Cloudflare Pages _redirects ────────────────────────────────────────────
+# Redirect www to apex domain (301 = permanent)
+https://www.campdayfunk.com/* https://campdayfunk.com/:splat 301

@@ -3,36 +3,141 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="DayFunk — Free daytime House Music party one Sunday a month in Minneapolis. Food, friends, drinks & house music at Eat Street Crossing."/>
 
-  <!-- SEO -->
+  <!-- ── SEO META ─────────────────────────────────────── -->
+  <title>DayFunk — Daytime House Music Party | Minneapolis, MN</title>
+  <meta name="description" content="DayFunk is a free daytime House Music party every month in Minneapolis at Eat Street Crossing. 2–8pm, all ages, no cover. Camp DayFunk July 17–19, 2026."/>
+  <meta name="keywords" content="DayFunk, house music Minneapolis, daytime party Minneapolis, Eat Street Crossing, Camp DayFunk, free music event Minneapolis"/>
   <meta name="robots" content="index, follow"/>
-  <meta name="keywords" content="DayFunk, house music Minneapolis, daytime dance party, Eat Street Crossing, free events Minneapolis, House music party, Camp DayFunk"/>
-  <link rel="canonical" href="https://dayfunk.com/"/>
+  <link rel="canonical" href="https://campdayfunk.com/"/>
 
-  <!-- Open Graph -->
+  <!-- ── OPEN GRAPH ────────────────────────────────────── -->
   <meta property="og:type" content="website"/>
-  <meta property="og:url" content="https://dayfunk.com/"/>
-  <meta property="og:title" content="DayFunk — Daytime House Music Minneapolis"/>
-  <meta property="og:description" content="Free daytime House Music party one Sunday a month at Eat Street Crossing in Minneapolis. Food, friends, drinks & house music. All ages, always free."/>
-  <meta property="og:image" content="https://dayfunk.com/dayfunk-logo.png"/>
+  <meta property="og:url" content="https://campdayfunk.com/"/>
+  <meta property="og:title" content="DayFunk — Daytime House Music | Minneapolis"/>
+  <meta property="og:description" content="Free daytime House Music party one Sunday a month in Minneapolis. All ages, no cover, 2–8pm at Eat Street Crossing. Camp DayFunk July 17–19, 2026."/>
+  <meta property="og:image" content="https://campdayfunk.com/dayfunk-og.jpg"/>
   <meta property="og:image:width" content="1200"/>
   <meta property="og:image:height" content="630"/>
-  <meta property="og:site_name" content="DayFunk"/>
+  <meta property="og:image:alt" content="DayFunk — Daytime House Music Minneapolis"/>
   <meta property="og:locale" content="en_US"/>
+  <meta property="og:site_name" content="DayFunk"/>
 
-  <!-- Twitter Card -->
+  <!-- ── TWITTER CARD ──────────────────────────────────── -->
   <meta name="twitter:card" content="summary_large_image"/>
-  <meta name="twitter:title" content="DayFunk — Daytime House Music Minneapolis"/>
-  <meta name="twitter:description" content="Free daytime House Music party one Sunday a month at Eat Street Crossing in Minneapolis. All ages, always free."/>
-  <meta name="twitter:image" content="https://dayfunk.com/dayfunk-logo.png"/>
-  <title>DayFunk — Daytime House Music Minneapolis</title>
+  <meta name="twitter:title" content="DayFunk — Daytime House Music | Minneapolis"/>
+  <meta name="twitter:description" content="Free daytime House Music every month in Minneapolis. All ages, no cover. Camp DayFunk July 17–19, 2026."/>
+  <meta name="twitter:image" content="https://campdayfunk.com/dayfunk-og.jpg"/>
+
+  <!-- ── STRUCTURED DATA: Organization ────────────────── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MusicGroup",
+    "name": "DayFunk",
+    "url": "https://campdayfunk.com",
+    "description": "Free daytime House Music party one Sunday a month in Minneapolis at Eat Street Crossing.",
+    "genre": "House Music",
+    "location": {
+      "@type": "Place",
+      "name": "Eat Street Crossing",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "2819 Nicollet Ave",
+        "addressLocality": "Minneapolis",
+        "addressRegion": "MN",
+        "postalCode": "55408",
+        "addressCountry": "US"
+      }
+    },
+    "sameAs": [
+      "https://www.facebook.com/profile.php?id=61550852684909",
+      "https://www.instagram.com/itsallhappeningrightnow"
+    ]
+  }
+  </script>
+
+  <!-- ── STRUCTURED DATA: Monthly Event ───────────────── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MusicEvent",
+    "name": "DayFunk featuring Lori Branch",
+    "startDate": "2026-05-17T14:00:00-05:00",
+    "endDate": "2026-05-17T20:00:00-05:00",
+    "eventStatus": "https://schema.org/EventScheduled",
+    "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+    "isAccessibleForFree": true,
+    "location": {
+      "@type": "Place",
+      "name": "Eat Street Crossing",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "2819 Nicollet Ave",
+        "addressLocality": "Minneapolis",
+        "addressRegion": "MN",
+        "postalCode": "55408",
+        "addressCountry": "US"
+      }
+    },
+    "performer": {
+      "@type": "Person",
+      "name": "Lori Branch"
+    },
+    "organizer": {
+      "@type": "Organization",
+      "name": "DayFunk",
+      "url": "https://campdayfunk.com"
+    },
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock"
+    }
+  }
+  </script>
+
+  <!-- ── STRUCTURED DATA: Camp DayFunk ────────────────── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MusicEvent",
+    "name": "Camp DayFunk 2026",
+    "startDate": "2026-07-17",
+    "endDate": "2026-07-19",
+    "eventStatus": "https://schema.org/EventScheduled",
+    "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+    "isAccessibleForFree": false,
+    "description": "Three days. Twenty-five DJs. One shared frequency. Camp DayFunk is the annual summer gathering for people who live for the music.",
+    "organizer": {
+      "@type": "Organization",
+      "name": "DayFunk",
+      "url": "https://campdayfunk.com"
+    },
+    "offers": {
+      "@type": "Offer",
+      "availability": "https://schema.org/SoldOut"
+    }
+  }
+  </script>
+
+  <!-- ── FONTS: preconnect then load ──────────────────── -->
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700;900&family=Playfair+Display:ital@1&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet"/>
+  <!-- Preload the most critical font to reduce CLS/FCP -->
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700;900&family=Playfair+Display:ital@1&family=DM+Sans:wght@400;500&display=swap"/>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700;900&family=Playfair+Display:ital@1&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet" media="print" onload="this.media='all'"/>
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700;900&family=Playfair+Display:ital@1&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet"/></noscript>
+
+  <!-- ── FAVICONS ──────────────────────────────────────── -->
   <link rel="icon" type="image/x-icon" href="favicon.ico"/>
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png"/>
   <link rel="apple-touch-icon" sizes="180x180" href="favicon-180.png"/>
+
+  <!-- ── THEME COLOR (mobile browser chrome) ──────────── -->
+  <meta name="theme-color" content="#fdf6ec"/>
+
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -98,6 +203,8 @@
 
     .logo-wrap {
       width: min(260px, 68vw);
+      /* explicit height prevents layout shift before image loads */
+      aspect-ratio: 1 / 1;
       margin: 0 auto 2rem;
       animation: float 4s ease-in-out infinite;
       position: relative;
@@ -113,6 +220,14 @@
     @keyframes float {
       0%, 100% { transform: translateY(0); }
       50%       { transform: translateY(-10px); }
+    }
+
+    /* Reduce motion for users who prefer it */
+    @media (prefers-reduced-motion: reduce) {
+      .logo-wrap { animation: none; }
+      .ticker-track { animation: none; }
+      .scroll-cue { animation: none; }
+      .fade-up { transition: none; }
     }
 
     .ticker-wrap {
@@ -182,7 +297,9 @@
       font-weight: 700;
       letter-spacing: 0.15em;
       text-transform: uppercase;
+      /* minimum 44px touch target height */
       padding: 0.75rem 1.75rem;
+      min-height: 44px;
       border: 1.5px solid currentColor;
       text-decoration: none;
       display: inline-flex;
@@ -196,6 +313,13 @@
 
     .btn-ig { color: var(--orange); }
     .btn-ig:hover { background: var(--orange); color: var(--bg); }
+
+    /* Focus styles for keyboard nav */
+    a:focus-visible,
+    button:focus-visible {
+      outline: 2px solid var(--orange);
+      outline-offset: 3px;
+    }
 
     .scroll-cue {
       position: absolute;
@@ -286,7 +410,13 @@
       text-align: center;
     }
 
-    .pillar-icon { font-size: 1.4rem; margin-bottom: 0.6rem; }
+    .pillar-icon {
+      font-size: 1.4rem;
+      margin-bottom: 0.6rem;
+      /* Prevent emoji from causing reflow */
+      display: block;
+      line-height: 1.4;
+    }
 
     .pillar-label {
       font-family: var(--font-disp);
@@ -479,7 +609,6 @@
       color: var(--dim);
       max-width: 500px;
       margin-bottom: 2.5rem;
-      text-wrap: balance;
     }
 
     .lineup-grid {
@@ -513,34 +642,6 @@
       color: var(--amber);
       line-height: 1.6;
     }
-
-    /* ── SIGNUP ───────────────────────────────────────── */
-    .signup-section { background: var(--bg-deep); }
-
-    .signup-inner {
-      max-width: 600px;
-      margin: 0 auto;
-      text-align: center;
-    }
-
-    .signup-headline {
-      font-family: var(--font-disp);
-      font-size: clamp(2.5rem, 8vw, 4rem);
-      font-weight: 900;
-      text-transform: uppercase;
-      line-height: 0.9;
-      margin-bottom: 1.25rem;
-    }
-
-    .signup-body {
-      font-size: 1rem;
-      line-height: 1.75;
-      color: var(--muted);
-      margin-bottom: 2rem;
-      text-wrap: balance;
-    }
-
-    .signup-form { max-width: 480px; margin: 0 auto; }
 
     /* ── FOOTER ───────────────────────────────────────── */
     footer {
@@ -593,146 +694,179 @@
 <body>
 
   <!-- HERO -->
-  <section class="hero">
+  <header>
+    <section class="hero" aria-labelledby="hero-heading">
 
-    <div class="logo-wrap">
-      <img src="dayfunk-logo.png" alt="DayFunk — Daytime House Music"/>
-    </div>
-
-    <div class="ticker-wrap" aria-hidden="true">
-      <div class="ticker-track">
-        <span class="ticker-text">Food &nbsp;&bull;&nbsp; Friends &nbsp;&bull;&nbsp; Drinks &nbsp;&bull;&nbsp; House Music &nbsp;&bull;&nbsp; Food &nbsp;&bull;&nbsp; Friends &nbsp;&bull;&nbsp; Drinks &nbsp;&bull;&nbsp; House Music &nbsp;&bull;&nbsp; Food &nbsp;&bull;&nbsp; Friends &nbsp;&bull;&nbsp; Drinks &nbsp;&bull;&nbsp; House Music &nbsp;&bull;&nbsp;</span>
-        <span class="ticker-text" aria-hidden="true">Food &nbsp;&bull;&nbsp; Friends &nbsp;&bull;&nbsp; Drinks &nbsp;&bull;&nbsp; House Music &nbsp;&bull;&nbsp; Food &nbsp;&bull;&nbsp; Friends &nbsp;&bull;&nbsp; Drinks &nbsp;&bull;&nbsp; House Music &nbsp;&bull;&nbsp; Food &nbsp;&bull;&nbsp; Friends &nbsp;&bull;&nbsp; Drinks &nbsp;&bull;&nbsp; House Music &nbsp;&bull;&nbsp;</span>
-      </div>
-    </div>
-
-    <p class="tagline">It's All Happening Right Now.</p>
-    <div class="pip"></div>
-
-    <nav class="social-row" aria-label="Social media">
-      <a class="btn-social btn-fb"
-         href="https://www.facebook.com/profile.php?id=61550852684909"
-         target="_blank" rel="noopener noreferrer">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
-        Facebook
-      </a>
-      <a class="btn-social btn-ig"
-         href="https://www.instagram.com/itsallhappeningrightnow"
-         target="_blank" rel="noopener noreferrer">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
-        Instagram
-      </a>
-    </nav>
-
-    <div class="scroll-cue" aria-hidden="true">
-      <span>Scroll</span>
-      <div class="chevron"></div>
-    </div>
-  </section>
-
-  <hr class="rule"/>
-
-  <!-- ETHOS -->
-  <section>
-    <div class="ethos fade-up">
-      <p class="eyebrow">Minneapolis &bull; One Sunday A Month</p>
-      <h2 class="ethos-headline">Daytime House.<br>All Are Welcome.</h2>
-      <p class="ethos-body">
-        DayFunk is a free, all-ages afternoon party at Eat Street Crossing in Minneapolis. No velvet ropes. No attitude. Just world-class House music, good people, and a dance floor that starts at 2pm and runs until 8.
-      </p>
-      <div class="pillars" role="list">
-        <div class="pillar" role="listitem"><div class="pillar-icon" aria-hidden="true">🌞</div><div class="pillar-label">Daytime</div></div>
-        <div class="pillar" role="listitem"><div class="pillar-icon" aria-hidden="true">🎶</div><div class="pillar-label">House Music</div></div>
-        <div class="pillar" role="listitem"><div class="pillar-icon" aria-hidden="true">🍽</div><div class="pillar-label">Food &amp; Drinks</div></div>
-        <div class="pillar" role="listitem"><div class="pillar-icon" aria-hidden="true">🆓</div><div class="pillar-label">Always Free</div></div>
-        <div class="pillar" role="listitem"><div class="pillar-icon" aria-hidden="true">🙌</div><div class="pillar-label">All Ages</div></div>
-      </div>
-    </div>
-  </section>
-
-  <hr class="rule"/>
-
-  <!-- EVENTS -->
-  <section>
-    <div class="events-inner fade-up">
-      <div class="events-header">
-        <h2 class="events-title">Upcoming</h2>
-        <span class="events-venue">
-          <a href="https://maps.google.com/?q=2819+Nicollet+Ave+Minneapolis+MN+55408" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: underline; text-underline-offset: 3px;">Eat Street Crossing</a> &bull; Mpls<br>
-          <span style="font-weight: 400; letter-spacing: 0.1em; color: var(--faint);">2819 Nicollet Ave, Minneapolis, MN 55408</span>
-        </span>
+      <div class="logo-wrap">
+        <!-- fetchpriority=high tells the browser to load this image ASAP -->
+        <!-- explicit width/height prevent CLS -->
+        <img src="dayfunk-logo.png"
+             alt="DayFunk — Daytime House Music Minneapolis"
+             width="340"
+             height="340"
+             fetchpriority="high"/>
       </div>
 
-      <article class="event-card">
-        <div class="event-date" aria-label="May 17">
-          <span class="event-month">May</span>
-          <span class="event-day">17</span>
-        </div>
-        <div class="event-info">
-          <div class="event-headliner">Lori Branch</div>
-          <div class="event-meta">Good Girl DJ's / Vintage House &bull; Chicago, IL<br/>Sunday &bull; 2–8pm &bull; All Ages</div>
-        </div>
-        <div class="event-badge"><span class="badge badge-free">Free</span></div>
-      </article>
+      <!-- hidden h1 for SEO/accessibility, logo is the visual heading -->
+      <h1 id="hero-heading" class="sr-only">DayFunk — Daytime House Music in Minneapolis</h1>
 
-      <p class="events-footnote"><a href="https://www.facebook.com/profile.php?id=61550852684909" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: underline; text-underline-offset: 3px;">Follow on Facebook</a> for full lineups &amp; announcements</p>
-    </div>
-  </section>
-
-  <hr class="rule"/>
-
-  <!-- CAMP DAYFUNK -->
-  <section class="camp-section">
-    <div class="camp-bg-word" aria-hidden="true">CAMP</div>
-    <div class="camp-inner fade-up">
-      <div class="camp-layout">
-        <div>
-          <p class="eyebrow">Annual Weekend Event</p>
-          <h2 class="camp-title">Camp<br>Day<br>Funk</h2>
-          <p class="camp-dates">July 17 – 19, 2026</p>
-          <span class="camp-soldout">Sold Out</span>
-          <p class="camp-desc">Three days. Twenty-five DJs. One shared frequency. Camp DayFunk is the annual summer gathering for people who live for the music.</p>
+      <div class="ticker-wrap" aria-hidden="true">
+        <div class="ticker-track">
+          <span class="ticker-text">Food &nbsp;&bull;&nbsp; Friends &nbsp;&bull;&nbsp; Drinks &nbsp;&bull;&nbsp; House Music &nbsp;&bull;&nbsp; Food &nbsp;&bull;&nbsp; Friends &nbsp;&bull;&nbsp; Drinks &nbsp;&bull;&nbsp; House Music &nbsp;&bull;&nbsp; Food &nbsp;&bull;&nbsp; Friends &nbsp;&bull;&nbsp; Drinks &nbsp;&bull;&nbsp; House Music &nbsp;&bull;&nbsp;</span>
+          <span class="ticker-text" aria-hidden="true">Food &nbsp;&bull;&nbsp; Friends &nbsp;&bull;&nbsp; Drinks &nbsp;&bull;&nbsp; House Music &nbsp;&bull;&nbsp; Food &nbsp;&bull;&nbsp; Friends &nbsp;&bull;&nbsp; Drinks &nbsp;&bull;&nbsp; House Music &nbsp;&bull;&nbsp; Food &nbsp;&bull;&nbsp; Friends &nbsp;&bull;&nbsp; Drinks &nbsp;&bull;&nbsp; House Music &nbsp;&bull;&nbsp;</span>
         </div>
-        <div>
-          <div class="lineup-grid">
-            <div class="lineup-row">
-              <div class="lineup-tier">Headliners</div>
-              <div class="lineup-names">DJ Slugo &bull; Woody McBride &bull; Fortune &bull; Doc Link &bull; DJ Dazy</div>
-            </div>
-            <div class="lineup-row">
-              <div class="lineup-tier">Also Performing</div>
-              <div class="lineup-names">Ralph Laurenn &bull; Dan Laino &bull; Scrubfish &bull; Nate Laurence &bull; Nick Gunz &bull; BunnyMob &bull; DJ Focus &bull; Disco Demon &bull; Vaughn Marques &bull; Dana Kazuko &bull; Jake Encinas &bull; Lack of Witness &bull; Girl E &bull; Daddy &bull; Michelle Muse &bull; Chris Bravos &bull; Faux Paul &bull; Mental Floss &bull; Brownie &bull; Paul Knox &bull; Inside the Robot &bull; DJ Butter &bull; EKS</div>
+      </div>
+
+      <p class="tagline">It's All Happening Right Now.</p>
+      <div class="pip" aria-hidden="true"></div>
+
+      <nav class="social-row" aria-label="DayFunk on social media">
+        <a class="btn-social btn-fb"
+           href="https://www.facebook.com/profile.php?id=61550852684909"
+           target="_blank"
+           rel="noopener noreferrer"
+           aria-label="DayFunk on Facebook (opens in new tab)">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          Facebook
+        </a>
+        <a class="btn-social btn-ig"
+           href="https://www.instagram.com/itsallhappeningrightnow"
+           target="_blank"
+           rel="noopener noreferrer"
+           aria-label="DayFunk on Instagram (opens in new tab)">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+          Instagram
+        </a>
+      </nav>
+
+      <div class="scroll-cue" aria-hidden="true">
+        <span>Scroll</span>
+        <div class="chevron"></div>
+      </div>
+    </section>
+  </header>
+
+  <main>
+
+    <hr class="rule"/>
+
+    <!-- ETHOS -->
+    <section aria-labelledby="ethos-heading">
+      <div class="ethos fade-up">
+        <p class="eyebrow">Minneapolis &bull; One Sunday A Month</p>
+        <h2 id="ethos-heading" class="ethos-headline">Daytime House.<br>All Are Welcome.</h2>
+        <p class="ethos-body">
+          DayFunk is a free, all-ages afternoon party at Eat Street Crossing in Minneapolis. No velvet ropes. No attitude. Just world-class House music, good people, and a dance floor that starts at 2pm and runs until 8.
+        </p>
+        <div class="pillars" role="list">
+          <div class="pillar" role="listitem"><span class="pillar-icon" aria-hidden="true">🌞</span><div class="pillar-label">Daytime</div></div>
+          <div class="pillar" role="listitem"><span class="pillar-icon" aria-hidden="true">🎶</span><div class="pillar-label">House Music</div></div>
+          <div class="pillar" role="listitem"><span class="pillar-icon" aria-hidden="true">🍽</span><div class="pillar-label">Food &amp; Drinks</div></div>
+          <div class="pillar" role="listitem"><span class="pillar-icon" aria-hidden="true">🆓</span><div class="pillar-label">Always Free</div></div>
+          <div class="pillar" role="listitem"><span class="pillar-icon" aria-hidden="true">🙌</span><div class="pillar-label">All Ages</div></div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="rule"/>
+
+    <!-- EVENTS -->
+    <section aria-labelledby="events-heading">
+      <div class="events-inner fade-up">
+        <div class="events-header">
+          <h2 id="events-heading" class="events-title">Upcoming</h2>
+          <address class="events-venue" style="font-style: normal;">
+            <a href="https://maps.google.com/?q=2819+Nicollet+Ave+Minneapolis+MN+55408"
+               target="_blank"
+               rel="noopener noreferrer"
+               aria-label="Eat Street Crossing on Google Maps"
+               style="color: inherit; text-decoration: underline; text-underline-offset: 3px;">Eat Street Crossing</a> &bull; Mpls<br>
+            <span style="font-weight: 400; letter-spacing: 0.1em; color: var(--faint);">2819 Nicollet Ave, Minneapolis, MN 55408</span>
+          </address>
+        </div>
+
+        <article class="event-card">
+          <div class="event-date" aria-label="May 17">
+            <span class="event-month">May</span>
+            <span class="event-day">17</span>
+          </div>
+          <div class="event-info">
+            <h3 class="event-headliner">Lori Branch</h3>
+            <p class="event-meta">Good Girl DJ's / Vintage House &bull; Chicago, IL<br/>Sunday &bull; 2–8pm &bull; All Ages</p>
+          </div>
+          <div class="event-badge"><span class="badge badge-free">Free</span></div>
+        </article>
+
+        <p class="events-footnote">
+          <a href="https://www.facebook.com/profile.php?id=61550852684909"
+             target="_blank"
+             rel="noopener noreferrer"
+             aria-label="Follow DayFunk on Facebook for announcements"
+             style="color: inherit; text-decoration: underline; text-underline-offset: 3px;">Follow on Facebook</a> for full lineups &amp; announcements
+        </p>
+      </div>
+    </section>
+
+    <hr class="rule"/>
+
+    <!-- CAMP DAYFUNK -->
+    <section class="camp-section" aria-labelledby="camp-heading">
+      <div class="camp-bg-word" aria-hidden="true">CAMP</div>
+      <div class="camp-inner fade-up">
+        <div class="camp-layout">
+          <div>
+            <p class="eyebrow">Annual Weekend Event</p>
+            <h2 id="camp-heading" class="camp-title">Camp<br>Day<br>Funk</h2>
+            <p class="camp-dates"><time datetime="2026-07-17/2026-07-19">July 17 – 19, 2026</time></p>
+            <span class="camp-soldout" aria-label="Sold out">Sold Out</span>
+            <p class="camp-desc">Three days. Twenty-five DJs. One shared frequency. Camp DayFunk is the annual summer gathering for people who live for the music.</p>
+          </div>
+          <div>
+            <div class="lineup-grid" role="list" aria-label="Camp DayFunk 2026 lineup">
+              <div class="lineup-row" role="listitem">
+                <p class="lineup-tier">Headliners</p>
+                <p class="lineup-names">DJ Slugo &bull; Woody McBride &bull; Fortune &bull; Doc Link &bull; DJ Dazy</p>
+              </div>
+              <div class="lineup-row" role="listitem">
+                <p class="lineup-tier">Also Performing</p>
+                <p class="lineup-names">Ralph Laurenn &bull; Dan Laino &bull; Scrubfish &bull; Nate Laurence &bull; Nick Gunz &bull; BunnyMob &bull; DJ Focus &bull; Disco Demon &bull; Vaughn Marques &bull; Dana Kazuko &bull; Jake Encinas &bull; Lack of Witness &bull; Girl E &bull; Daddy &bull; Michelle Muse &bull; Chris Bravos &bull; Faux Paul &bull; Mental Floss &bull; Brownie &bull; Paul Knox &bull; Inside the Robot &bull; DJ Butter &bull; EKS</p>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <hr class="rule"/>
-
-  <!-- EMAIL SIGNUP -->
-  <section class="signup-section">
-    <div class="signup-inner fade-up">
-      <p class="eyebrow">Stay In The Loop</p>
-      <h2 class="signup-headline">Get The Word<br>Before Anyone Else.</h2>
-      <p class="signup-body">Event announcements, lineup drops, and Camp DayFunk updates delivered straight to your inbox.</p>
-      <div class="signup-form">
-        <script async src="https://eocampaign1.com/form/c6abd42a-38c2-11f1-85c4-89c64abbe1fb.js" data-form="c6abd42a-38c2-11f1-85c4-89c64abbe1fb"></script>
-      </div>
-    </div>
-  </section>
+  </main>
 
   <!-- FOOTER -->
   <footer>
     <p class="footer-text">DayFunk &bull; Minneapolis, MN &bull; It's All Happening Right Now</p>
   </footer>
 
-  <script>
-    const obs = new IntersectionObserver(entries => {
-      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-    }, { threshold: 0.12 });
-    document.querySelectorAll('.fade-up').forEach(el => obs.observe(el));
+  <!-- Screen reader only utility -->
+  <style>
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0,0,0,0);
+      white-space: nowrap;
+      border: 0;
+    }
+  </style>
+
+  <!-- Deferred JS: non-critical, runs after parse -->
+  <script defer>
+    document.addEventListener('DOMContentLoaded', function() {
+      const obs = new IntersectionObserver(entries => {
+        entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
+      }, { threshold: 0.12 });
+      document.querySelectorAll('.fade-up').forEach(el => obs.observe(el));
+    });
   </script>
 
 </body>
