@@ -455,7 +455,12 @@
       color: var(--dim);
     }
 
-    .event-card {
+    a.event-card {
+      text-decoration: none;
+      color: inherit;
+    }
+
+        .event-card {
       display: grid;
       grid-template-columns: 72px 1fr auto;
       align-items: stretch;
@@ -795,8 +800,12 @@
           </address>
         </div>
 
-        <article class="event-card">
-          <div class="event-date" aria-label="May 17">
+        <a class="event-card"
+           href="https://facebook.com/events/s/dayfunk-daytime-house-music-pa/1970177033887239/"
+           target="_blank"
+           rel="noopener noreferrer"
+           aria-label="DayFunk featuring Lori Branch — Sunday May 17 at Eat Street Crossing. Free. View on Facebook.">
+          <div class="event-date" aria-hidden="true">
             <span class="event-month">May</span>
             <span class="event-day">17</span>
           </div>
@@ -806,7 +815,7 @@
             <p class="event-support">Support: Noel Jean &bull; Harry Duran &bull; Vlad Hurduc &bull; Nick Gunz</p>
           </div>
           <div class="event-badge"><span class="badge badge-free">Free</span></div>
-        </article>
+        </a>
 
         <p class="events-footnote">
           <a href="https://www.facebook.com/profile.php?id=61550852684909"
