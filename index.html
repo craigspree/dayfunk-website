@@ -588,6 +588,155 @@
       color: var(--faint);
     }
 
+    /* ── LISTEN BACK / ARCHIVE ────────────────────────── */
+    .archive-section {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .archive-inner { max-width: 900px; margin: 0 auto; }
+
+    .archive-header {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+      margin-bottom: 2.75rem;
+    }
+
+    .archive-title {
+      font-family: var(--font-disp);
+      font-size: clamp(2.5rem, 8vw, 4.5rem);
+      font-weight: 900;
+      text-transform: uppercase;
+      line-height: 1;
+    }
+
+    .archive-desc {
+      font-family: var(--font-disp);
+      font-size: 0.75rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--faint);
+      text-wrap: balance;
+    }
+
+    /* The "deck" — minimal frame wrapping the SoundCloud embed */
+    .deck {
+      position: relative;
+      max-width: 600px;
+      margin: 0 auto;
+      background: var(--bg);
+      border: 1px solid var(--rule);
+    }
+
+    .deck-chrome {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.4rem 0.85rem;
+      padding: 1rem 1.25rem;
+      border-bottom: 1px solid var(--rule);
+    }
+    .deck-chrome .deck-label-name { flex: 1 1 auto; }
+    .deck-chrome .deck-leds       { margin-left: auto; }
+
+    .deck-label-tape {
+      font-family: var(--font-disp);
+      font-size: 0.6rem;
+      font-weight: 700;
+      letter-spacing: 0.3em;
+      color: var(--orange);
+      border: 1px solid var(--orange);
+      padding: 0.15rem 0.45rem;
+      text-transform: uppercase;
+    }
+    .deck-label-name {
+      font-family: var(--font-disp);
+      font-size: 0.95rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--text);
+    }
+    .deck-label-side {
+      font-family: var(--font-body);
+      font-size: 0.7rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--dim);
+    }
+
+    .deck-leds { display: flex; gap: 0.45rem; }
+    .led {
+      width: 7px; height: 7px; border-radius: 50%;
+      box-shadow: 0 0 0 1px rgba(0,0,0,0.5), 0 0 8px currentColor;
+    }
+    .led-red   { color: #ff4a3a; background: #ff4a3a; animation: pulse 2.4s ease-in-out infinite; }
+    .led-amber { color: #e8a23a; background: #e8a23a; }
+    .led-green { color: #4ac06a; background: #4ac06a; }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 0.4; }
+      50%      { opacity: 1; }
+    }
+
+    .deck-window { position: relative; }
+    .deck-window iframe {
+      display: block;
+      width: 100%;
+      max-width: 560px;
+      margin: 0 auto;
+      border: 0;
+    }
+
+    .deck-foot {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 0.85rem 1.25rem;
+      border-top: 1px solid var(--rule);
+      flex-wrap: wrap;
+    }
+
+    .deck-transport { display: flex; gap: 0.4rem; }
+    .deck-transport .key {
+      width: 32px;
+      height: 28px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.7rem;
+      color: var(--text);
+      background: var(--bg);
+      border: 1px solid var(--rule);
+      border-radius: 2px;
+      cursor: pointer;
+      padding: 0;
+      font-family: inherit;
+      transition: filter 0.15s, transform 0.08s, background 0.15s, color 0.15s;
+    }
+    .deck-transport .key:hover  { background: var(--bg-mid); }
+    .deck-transport .key:active { transform: translateY(1px); }
+    .deck-transport .key.is-active {
+      background: var(--orange);
+      color: var(--bg);
+      border-color: var(--orange);
+    }
+
+    .deck-link {
+      font-family: var(--font-disp);
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--orange);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.18s;
+    }
+    .deck-link:hover { border-color: var(--orange); }
+
     /* ── CAMP ─────────────────────────────────────────── */
     .camp-section {
       background: var(--bg-deep);
@@ -712,6 +861,21 @@
     }
     .fade-up.visible { opacity: 1; transform: translateY(0); }
 
+    /* ── Mobile chrome (<640px): two rows ─────────────── */
+    @media (max-width: 639px) {
+      .deck-chrome {
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        column-gap: 0.6rem;
+        row-gap: 0.35rem;
+        padding: 0.6rem 1.25rem 0.7rem 1.75rem;
+      }
+      .deck-chrome .deck-label-tape { grid-column: 1; grid-row: 1; align-self: center; }
+      .deck-chrome .deck-label-name { grid-column: 2 / -1; grid-row: 1; align-self: center; flex: none; }
+      .deck-chrome .deck-label-side { grid-column: 1 / span 2; grid-row: 2; align-self: center; }
+      .deck-chrome .deck-leds      { grid-column: 3; grid-row: 2; justify-self: end; align-self: center; margin-left: 0; padding-right: 0; }
+    }
+
     /* ── 640px ────────────────────────────────────────── */
     @media (min-width: 640px) {
       .pillars { grid-template-columns: repeat(5, 1fr); }
@@ -734,8 +898,17 @@
         gap: 4rem;
         align-items: start;
       }
+      .archive-header {
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+      }
+      .archive-desc {
+        max-width: 520px;
+        align-self: start;
+      }
     }
   </style>
+  <script src="https://w.soundcloud.com/player/api.js"></script>
 </head>
 <body>
 
@@ -860,6 +1033,66 @@
 
     <hr class="rule"/>
 
+    <!-- LISTEN BACK / ARCHIVE -->
+    <section id="listen" class="archive-section" data-screen-label="Archive" aria-labelledby="archive-heading">
+      <div class="archive-inner fade-up">
+
+        <div class="archive-header">
+          <div>
+            <p class="eyebrow">From The Archive</p>
+            <h2 id="archive-heading" class="archive-title">Listen Back</h2>
+          </div>
+          <p class="archive-desc">
+            Recorded sets from the DayFunk crate &mdash; headliners, residents, surprise guests. Press play, let it ride.
+          </p>
+        </div>
+
+        <!-- Custom-skinned shell wrapping the SoundCloud playlist embed -->
+        <div class="deck" role="region" aria-label="DayFunk recorded sets player">
+          <div class="deck-chrome">
+            <span class="deck-label-tape">REC</span>
+            <span class="deck-label-name">DayFunk &middot; Mpls Monthly</span>
+            <span class="deck-label-side">Side A</span>
+            <div class="deck-leds" aria-hidden="true">
+              <span class="led led-red"></span>
+              <span class="led led-amber"></span>
+              <span class="led led-green"></span>
+            </div>
+          </div>
+
+          <div class="deck-window">
+            <iframe
+              title="DayFunk recorded sets &mdash; SoundCloud playlist"
+              width="100%"
+              scrolling="no"
+              frameborder="no"
+              loading="lazy"
+              allow="autoplay; encrypted-media"
+              src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/soundcloud%253Aplaylists%253A1791003144&color=%23e8610a&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=false&visual=true"></iframe>
+          </div>
+
+          <div class="deck-foot">
+            <div class="deck-transport" role="group" aria-label="Playback controls">
+              <button type="button" class="key" data-act="prev"  aria-label="Previous track">&#9198;</button>
+              <button type="button" class="key" data-act="play"  aria-label="Play">&#9654;</button>
+              <button type="button" class="key" data-act="pause" aria-label="Pause">&#10074;&#10074;</button>
+              <button type="button" class="key" data-act="next"  aria-label="Next track">&#9197;</button>
+            </div>
+            <a class="deck-link"
+               href="https://soundcloud.com/user-467880110/sets/dayfunk-minneapolis-monthly"
+               target="_blank"
+               rel="noopener noreferrer"
+               aria-label="Open the DayFunk playlist on SoundCloud (opens in new tab)">
+              Open on SoundCloud &rarr;
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <hr class="rule"/>
+
     <!-- CAMP DAYFUNK -->
     <section class="camp-section" aria-labelledby="camp-heading">
       <div class="camp-bg-word" aria-hidden="true">CAMP</div>
@@ -918,6 +1151,82 @@
       }, { threshold: 0.12 });
       document.querySelectorAll('.fade-up').forEach(el => obs.observe(el));
     });
+  </script>
+
+  <script defer>
+    (function(){
+      // Size the SoundCloud iframe height = its rendered width + the controls bar.
+      // This keeps the artwork fully visible at every breakpoint, since the
+      // controls strip is a fixed pixel height regardless of width.
+      const iframe = document.querySelector('.deck-window iframe');
+      if (!iframe) return;
+      const CONTROLS = 65;
+      const size = () => {
+        const w = iframe.getBoundingClientRect().width;
+        if (w > 0) iframe.style.height = (w + CONTROLS) + 'px';
+      };
+      size();
+      window.addEventListener('resize', size);
+      if ('ResizeObserver' in window) new ResizeObserver(size).observe(iframe);
+      window.addEventListener('load', size);
+    })();
+  </script>
+
+  <script defer>
+    (function(){
+      // Wire the cassette transport buttons to the SoundCloud Widget API.
+      // We wait for the iframe to load AND the SC global to be available before
+      // creating the widget instance — this avoids race conditions where buttons
+      // are clicked before the player is ready.
+      const iframe = document.querySelector('.deck-window iframe');
+      if (!iframe) return;
+
+      function init(){
+        if (!window.SC || !window.SC.Widget) {
+          return setTimeout(init, 100);
+        }
+        const widget = SC.Widget(iframe);
+        const transport = document.querySelector('.deck-transport');
+        if (!transport) return;
+
+        const handlers = {
+          prev:  () => widget.prev(),
+          play:  () => widget.play(),
+          pause: () => widget.pause(),
+          next:  () => widget.next()
+        };
+
+        // Delegate one click listener on the transport row.
+        // Each click is a direct user gesture, so play/pause respects autoplay rules.
+        transport.addEventListener('click', function(e){
+          const btn = e.target.closest('.key');
+          if (!btn) return;
+          const act = btn.dataset.act;
+          if (handlers[act]) handlers[act]();
+        });
+
+        const setActive = (act) => {
+          transport.querySelectorAll('.key.is-active').forEach(k => k.classList.remove('is-active'));
+          if (act) {
+            const b = transport.querySelector('.key[data-act="' + act + '"]');
+            if (b) b.classList.add('is-active');
+          }
+        };
+
+        // Bind state events once the widget is ready.
+        widget.bind(SC.Widget.Events.READY, function(){
+          widget.bind(SC.Widget.Events.PLAY,   () => setActive('play'));
+          widget.bind(SC.Widget.Events.PAUSE,  () => setActive('pause'));
+          widget.bind(SC.Widget.Events.FINISH, () => setActive(null));
+        });
+      }
+
+      // Defer until iframe load to be extra-safe
+      if (iframe.complete || iframe.contentDocument) init();
+      else iframe.addEventListener('load', init, { once: true });
+      // Fallback: also try after window load in case iframe load already fired
+      window.addEventListener('load', init, { once: true });
+    })();
   </script>
 
 </body>
