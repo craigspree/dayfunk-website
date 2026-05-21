@@ -953,7 +953,8 @@
            href="https://www.facebook.com/profile.php?id=61550852684909"
            target="_blank"
            rel="noopener noreferrer"
-           aria-label="DayFunk on Facebook (opens in new tab)">
+           aria-label="DayFunk on Facebook (opens in new tab)"
+           onclick="gtag('event','social_click',{platform:'facebook',location:'hero'})">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
           Facebook
         </a>
@@ -961,7 +962,8 @@
            href="https://www.instagram.com/itsallhappeningrightnow"
            target="_blank"
            rel="noopener noreferrer"
-           aria-label="DayFunk on Instagram (opens in new tab)">
+           aria-label="DayFunk on Instagram (opens in new tab)"
+           onclick="gtag('event','social_click',{platform:'instagram',location:'hero'})">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
           Instagram
         </a>
@@ -1017,7 +1019,8 @@
            href="https://www.facebook.com/events/26740707475591385"
            target="_blank"
            rel="noopener noreferrer"
-           aria-label="DayFunk featuring Colette — Sunday June 14 at Eat Street Crossing. Free. View on Facebook.">
+           aria-label="DayFunk featuring Colette — Sunday June 14 at Eat Street Crossing. Free. View on Facebook."
+           onclick="gtag('event','facebook_event_click',{headliner:document.querySelector('.event-headliner')?.textContent.trim()})">
           <div class="event-date" aria-hidden="true">
             <span class="event-month">Jun</span>
             <span class="event-day">14</span>
@@ -1035,7 +1038,8 @@
              target="_blank"
              rel="noopener noreferrer"
              aria-label="Follow DayFunk on Facebook for announcements"
-             style="color: inherit; text-decoration: underline; text-underline-offset: 3px;">Follow on Facebook</a> for full lineups &amp; announcements
+             style="color: inherit; text-decoration: underline; text-underline-offset: 3px;"
+             onclick="gtag('event','social_click',{platform:'facebook',location:'events_footnote'})">Follow on Facebook</a> for full lineups &amp; announcements
         </p>
       </div>
     </section>
@@ -1212,6 +1216,7 @@
           if (!btn) return;
           const act = btn.dataset.act;
           if (handlers[act]) handlers[act]();
+          gtag('event', 'soundcloud_transport', { action: act });
         });
 
         const setActive = (act) => {
@@ -1224,9 +1229,9 @@
 
         // Bind state events once the widget is ready.
         widget.bind(SC.Widget.Events.READY, function(){
-          widget.bind(SC.Widget.Events.PLAY,   () => setActive('play'));
-          widget.bind(SC.Widget.Events.PAUSE,  () => setActive('pause'));
-          widget.bind(SC.Widget.Events.FINISH, () => setActive(null));
+          widget.bind(SC.Widget.Events.PLAY,   () => { setActive('play');  gtag('event', 'soundcloud_play'); });
+          widget.bind(SC.Widget.Events.PAUSE,  () => { setActive('pause'); gtag('event', 'soundcloud_pause'); });
+          widget.bind(SC.Widget.Events.FINISH, () => { setActive(null);    gtag('event', 'soundcloud_finish'); });
         });
       }
 
