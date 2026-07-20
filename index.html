@@ -752,22 +752,6 @@
       overflow: hidden;
     }
 
-    .camp-bg-word {
-      position: absolute;
-      right: -1rem;
-      top: 50%;
-      transform: translateY(-50%);
-      font-family: var(--font-disp);
-      font-size: clamp(12rem, 30vw, 22rem);
-      font-weight: 900;
-      text-transform: uppercase;
-      color: #e8d8c0;
-      line-height: 1;
-      pointer-events: none;
-      user-select: none;
-      white-space: nowrap;
-    }
-
     .camp-inner {
       max-width: 900px;
       margin: 0 auto;
@@ -784,66 +768,22 @@
       margin-bottom: 1.5rem;
     }
 
-    .camp-dates {
+    .camp-thanks {
       font-family: var(--font-disp);
       font-size: clamp(1.4rem, 4vw, 1.8rem);
       font-weight: 700;
-      color: var(--amber);
-      letter-spacing: 0.05em;
-      margin-bottom: 0.75rem;
-    }
-
-    .camp-soldout {
-      display: inline-block;
-      font-family: var(--font-disp);
-      font-size: 0.75rem;
-      font-weight: 700;
-      letter-spacing: 0.2em;
       text-transform: uppercase;
-      color: var(--red);
-      border: 1px solid var(--red);
-      padding: 0.25rem 0.75rem;
+      color: var(--text);
+      letter-spacing: 0.02em;
       margin-bottom: 1.25rem;
     }
 
-    .camp-desc {
-      font-size: 1rem;
-      line-height: 1.75;
-      color: var(--dim);
-      max-width: 500px;
-      margin-bottom: 2.5rem;
-    }
-
-    .lineup-grid {
-      display: grid;
-      gap: 1px;
-      background: var(--rule);
-      border: 1px solid var(--rule);
-    }
-
-    .lineup-row {
-      background: var(--bg-deep);
-      padding: 1rem 1.25rem;
-    }
-
-    .lineup-tier {
+    .camp-next {
       font-family: var(--font-disp);
-      font-size: 0.65rem;
+      font-size: 1.1rem;
       font-weight: 700;
-      letter-spacing: 0.3em;
-      text-transform: uppercase;
-      color: var(--faint);
-      margin-bottom: 0.3rem;
-    }
-
-    .lineup-names {
-      font-family: var(--font-disp);
-      font-size: 1rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
       color: var(--amber);
-      line-height: 1.6;
+      letter-spacing: 0.03em;
     }
 
     /* ── FOOTER ───────────────────────────────────────── */
@@ -900,12 +840,6 @@
       .event-day   { font-size: 2.8rem; }
       .event-info  { padding: 1.5rem 2rem; }
       .event-badge { padding: 0 1.5rem; }
-      .camp-layout {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 4rem;
-        align-items: start;
-      }
       .archive-header {
         grid-template-columns: 1fr;
         gap: 1.25rem;
@@ -1107,29 +1041,11 @@
 
     <!-- CAMP DAYFUNK -->
     <section class="camp-section" aria-labelledby="camp-heading">
-      <div class="camp-bg-word" aria-hidden="true">CAMP</div>
       <div class="camp-inner fade-up">
-        <div class="camp-layout">
-          <div>
-            <p class="eyebrow">Annual Weekend Event</p>
-            <h2 id="camp-heading" class="camp-title">Camp<br>Day<br>Funk</h2>
-            <p class="camp-dates"><time datetime="2026-07-17/2026-07-19">July 17 – 19, 2026</time></p>
-            <span class="camp-soldout" aria-label="Sold out">Sold Out</span>
-            <p class="camp-desc">Three days. Twenty-five DJs. One shared frequency. Camp DayFunk is the annual summer gathering for people who live for the music.</p>
-          </div>
-          <div>
-            <div class="lineup-grid" role="list" aria-label="Camp DayFunk 2026 lineup">
-              <div class="lineup-row" role="listitem">
-                <p class="lineup-tier">Headliners</p>
-                <p class="lineup-names">DJ Slugo &bull; Woody McBride &bull; Fortune &bull; Doc Link &bull; DJ Dazy</p>
-              </div>
-              <div class="lineup-row" role="listitem">
-                <p class="lineup-tier">Also Performing</p>
-                <p class="lineup-names">Ralph Laurenn &bull; Dan Laino &bull; Scrubfish &bull; Nate Laurence &bull; Nick Gunz &bull; BunnyMob &bull; DJ Focus &bull; Disco Demon &bull; Vaughn Marques &bull; Eric Lee &bull; Dana Kazuko &bull; Jake Encinas &bull; Lack of Witness &bull; Girl E &bull; Daddy &bull; Michelle Muse &bull; Chris Bravos &bull; Faux Paul &bull; Mental Floss &bull; Brownie &bull; Paul Knox &bull; Inside the Robot &bull; DJ Butter &bull; EKS</p>
-              </div>
-            </div>
-          </div>
-        </div>
+        <p class="eyebrow">Annual Weekend Event</p>
+        <h2 id="camp-heading" class="camp-title">Camp Day Funk</h2>
+        <p class="camp-thanks">Thanks For An Incredible Weekend In 2026</p>
+        <p class="camp-next">We're already thinking about 2027. We'll be in touch soon&hellip;</p>
       </div>
     </section>
 
