@@ -1055,11 +1055,18 @@
         <p class="eyebrow">Annual Weekend Event</p>
         <h2 id="camp-heading" class="camp-title">Camp Day Funk</h2>
         <p class="camp-thanks">Thanks For An Incredible Weekend In 2026</p>
-        <p class="camp-survey-text">So many moving parts, but we're back home, unpacked, and already thinking about next year. We'd love to hear your thoughts. Please take our short survey.</p>
-        <a class="btn-social btn-ig camp-survey-btn"
-           href="https://forms.gle/vuaYhCXcA3q6JyGv5"
-           target="_blank" rel="noopener"
-           onclick="gtag('event','survey_click',{location:'camp_thanks'})">Take the Survey</a>
+        <div id="camp-survey">
+          <p class="camp-survey-text">So many moving parts, but we're back home, unpacked, and already thinking about next year. We'd love to hear your thoughts. Please take our short survey.</p>
+          <a class="btn-social btn-ig camp-survey-btn"
+             href="https://forms.gle/vuaYhCXcA3q6JyGv5"
+             target="_blank" rel="noopener"
+             onclick="gtag('event','survey_click',{location:'camp_thanks'})">Take the Survey</a>
+        </div>
+        <script>
+          if (new Date() >= new Date(2026, 10, 1)) {
+            document.getElementById('camp-survey').style.display = 'none';
+          }
+        </script>
         <p class="camp-next">We're already thinking about 2027. We'll be in touch soon&hellip;</p>
       </div>
     </section>
