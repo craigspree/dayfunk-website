@@ -66,17 +66,68 @@
   }
   </script>
 
+  <!-- ── STRUCTURED DATA: Pop-Up Event ────────────────── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MusicEvent",
+    "name": "DayFunk Pop-Up at Uptown Vibes Festival",
+    "description": "DayFunk pop-up party at Vuka Peri-Peri for the Uptown Vibes Festival in Minneapolis. Free admission, house music all day with Ralph Laurenn, Nate Laurence, Nick Gunz, TNA, Girl E, Brownie, and EKS.",
+    "image": "https://dayfunk.com/dayfunk-og.jpg",
+    "url": "https://www.facebook.com/events/2484925368681706/",
+    "startDate": "2026-09-19T13:00:00-05:00",
+    "endDate": "2026-09-19T20:00:00-05:00",
+    "eventStatus": "https://schema.org/EventScheduled",
+    "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+    "isAccessibleForFree": true,
+    "location": {
+      "@type": "Place",
+      "name": "Vuka Peri-Peri",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "626 W. Lake St",
+        "addressLocality": "Minneapolis",
+        "addressRegion": "MN",
+        "postalCode": "55408",
+        "addressCountry": "US"
+      }
+    },
+    "performer": [
+      { "@type": "Person", "name": "Ralph Laurenn" },
+      { "@type": "Person", "name": "Nate Laurence" },
+      { "@type": "Person", "name": "Nick Gunz" },
+      { "@type": "Person", "name": "TNA" },
+      { "@type": "Person", "name": "Girl E" },
+      { "@type": "Person", "name": "Brownie" },
+      { "@type": "Person", "name": "EKS" }
+    ],
+    "organizer": {
+      "@type": "Organization",
+      "name": "DayFunk",
+      "url": "https://dayfunk.com"
+    },
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock",
+      "url": "https://www.facebook.com/events/2484925368681706/",
+      "validFrom": "2026-08-25T00:00:00-05:00"
+    }
+  }
+  </script>
+
   <!-- ── STRUCTURED DATA: Monthly Event ───────────────── -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "MusicEvent",
-    "name": "DayFunk featuring Eddie Leader",
-    "description": "Free daytime House Music party at Eat Street Crossing in Minneapolis. Eddie Leader (Hudd Traxx, Ibiza/UK) headlines with support from Jeff Kash, Rulo, Nick Gunz, and Tricky Miki. All ages, no cover.",
+    "name": "DayFunk featuring Gettoblaster",
+    "description": "Free daytime House Music party at Eat Street Crossing in Minneapolis. Gettoblaster (Aliens on Mushrooms) headlines with support from EKS, J Matthews, Larry Peace, and Nick Gunz. All ages, no cover.",
     "image": "https://dayfunk.com/dayfunk-og.jpg",
-    "url": "https://www.facebook.com/events/2064457920856203",
-    "startDate": "2026-08-23T14:00:00-05:00",
-    "endDate": "2026-08-23T20:00:00-05:00",
+    "url": "https://www.facebook.com/events/1585146769866233",
+    "startDate": "2026-09-27T14:00:00-05:00",
+    "endDate": "2026-09-27T20:00:00-05:00",
     "eventStatus": "https://schema.org/EventScheduled",
     "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
     "isAccessibleForFree": true,
@@ -93,11 +144,11 @@
       }
     },
     "performer": [
-      { "@type": "Person", "name": "Eddie Leader" },
-      { "@type": "Person", "name": "Jeff Kash" },
-      { "@type": "Person", "name": "Rulo" },
-      { "@type": "Person", "name": "Nick Gunz" },
-      { "@type": "Person", "name": "Tricky Miki" }
+      { "@type": "Person", "name": "Gettoblaster" },
+      { "@type": "Person", "name": "EKS" },
+      { "@type": "Person", "name": "J Matthews" },
+      { "@type": "Person", "name": "Larry Peace" },
+      { "@type": "Person", "name": "Nick Gunz" }
     ],
     "organizer": {
       "@type": "Organization",
@@ -109,8 +160,8 @@
       "price": "0",
       "priceCurrency": "USD",
       "availability": "https://schema.org/InStock",
-      "url": "https://www.facebook.com/events/2064457920856203",
-      "validFrom": "2026-07-27T00:00:00-05:00"
+      "url": "https://www.facebook.com/events/1585146769866233",
+      "validFrom": "2026-08-25T00:00:00-05:00"
     }
   }
   </script>
@@ -505,7 +556,7 @@
       grid-template-columns: 72px 1fr auto;
       align-items: stretch;
       border: 1px solid var(--rule);
-      margin-bottom: 1px;
+      margin-bottom: 0.85rem;
       transition: background 0.15s;
     }
 
@@ -540,6 +591,17 @@
     }
 
     .event-info { padding: 1.25rem 1.25rem; }
+
+    .event-tag {
+      display: block;
+      font-family: var(--font-disp);
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--amber);
+      margin-bottom: 0.4rem;
+    }
 
     .event-headliner {
       font-family: var(--font-disp);
@@ -929,7 +991,8 @@
       <div class="events-inner fade-up">
         <div class="events-header">
           <h2 id="events-heading" class="events-title">Upcoming</h2>
-          <address class="events-venue" style="font-style: normal;">
+          <span id="events-venue-multi" class="events-venue">Two Shows This September</span>
+          <address id="events-venue-single" class="events-venue" style="font-style: normal; display: none;">
             <a href="https://maps.google.com/?q=2819+Nicollet+Ave+Minneapolis+MN+55408"
                target="_blank"
                rel="noopener noreferrer"
@@ -939,23 +1002,55 @@
           </address>
         </div>
 
-        <a class="event-card"
-           href="https://www.facebook.com/events/2064457920856203"
+        <!-- Pop-Up: Sept 19 at Vuka Peri-Peri / Uptown Vibes Festival -->
+        <!-- Auto-hides Sept 20, 2026 once the show has passed — see script below, same pattern as #camp-survey -->
+        <a id="popup-event" class="event-card"
+           href="https://www.facebook.com/events/2484925368681706/"
            target="_blank"
            rel="noopener noreferrer"
-           aria-label="DayFunk featuring Eddie Leader — Sunday August 23 at Eat Street Crossing. Free. View on Facebook."
-           onclick="gtag('event','facebook_event_click',{headliner:document.querySelector('.event-headliner')?.textContent.trim()})">
-          <div class="event-date" aria-hidden="true">
-            <span class="event-month">Aug</span>
-            <span class="event-day">23</span>
+           aria-label="DayFunk Pop-Up — Saturday September 19 at Vuka Peri-Peri for Uptown Vibes Festival. Free. View on Facebook."
+           onclick="gtag('event','facebook_event_click',{headliner:'DayFunk Pop-Up'})">
+          <div class="event-date navy" aria-hidden="true">
+            <span class="event-month">Sep</span>
+            <span class="event-day">19</span>
           </div>
           <div class="event-info">
-            <h3 class="event-headliner">Eddie Leader</h3>
-            <p class="event-meta">Hudd Traxx &bull; Ibiza / UK<br/>Sunday &bull; 2–8pm &bull; All Ages</p>
-            <p class="event-support">Support: Jeff Kash &bull; Rulo &bull; Nick Gunz &bull; Tricky Miki</p>
+            <span class="event-tag">DayFunk Pop-Up &bull; New Location</span>
+            <h3 class="event-headliner">Uptown Vibes Festival</h3>
+            <p class="event-meta">Vuka Peri-Peri &bull; 626 W. Lake St, Minneapolis<br/>Saturday &bull; 1–8pm &bull; Free Admission</p>
+            <p class="event-support">Lineup: Ralph Laurenn &bull; Nate Laurence &bull; Nick Gunz &bull; TNA &bull; Girl E &bull; Brownie &bull; EKS</p>
           </div>
           <div class="event-badge"><span class="badge badge-free">Free</span></div>
         </a>
+
+        <!-- Monthly Residency: Sept 27 at Eat Street Crossing -->
+        <a class="event-card"
+           href="https://www.facebook.com/events/1585146769866233"
+           target="_blank"
+           rel="noopener noreferrer"
+           aria-label="DayFunk featuring Gettoblaster — Sunday September 27 at Eat Street Crossing. Free. View on Facebook."
+           onclick="gtag('event','facebook_event_click',{headliner:document.querySelectorAll('.event-headliner')[1]?.textContent.trim()})">
+          <div class="event-date" aria-hidden="true">
+            <span class="event-month">Sep</span>
+            <span class="event-day">27</span>
+          </div>
+          <div class="event-info">
+            <span id="std-event-tag" class="event-tag">Monthly Residency &bull; Eat Street Crossing</span>
+            <h3 class="event-headliner">Gettoblaster</h3>
+            <p class="event-meta">Aliens on Mushrooms<br/>Sunday &bull; 2–8pm &bull; All Ages</p>
+            <p class="event-support">Support: EKS &bull; J Matthews &bull; Larry Peace &bull; Nick Gunz</p>
+          </div>
+          <div class="event-badge"><span class="badge badge-free">Free</span></div>
+        </a>
+
+        <script>
+          if (new Date() >= new Date(2026, 8, 20)) {
+            document.getElementById('popup-event').style.display = 'none';
+            document.getElementById('events-venue-multi').style.display = 'none';
+            document.getElementById('events-venue-single').style.display = '';
+            document.getElementById('std-event-tag').textContent = 'Eat Street Crossing';
+          }
+        </script>
 
         <p class="events-footnote">
           <a href="https://www.facebook.com/profile.php?id=61550852684909"
