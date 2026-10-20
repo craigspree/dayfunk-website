@@ -67,7 +67,8 @@
   </script>
 
   <!-- ── STRUCTURED DATA: Monthly Event ───────────────── -->
-  <script type="application/ld+json">
+  <!-- Oct block is live until the swap script in the Events section flips to Nov at 8pm CT Oct 25 -->
+  <script type="application/ld+json" id="ld-event-oct">
   {
     "@context": "https://schema.org",
     "@type": "MusicEvent",
@@ -111,6 +112,55 @@
       "availability": "https://schema.org/InStock",
       "url": "https://www.facebook.com/events/1627701102317055",
       "validFrom": "2026-09-29T00:00:00-05:00"
+    }
+  }
+  </script>
+
+  <!-- Nov block: inert (text/plain) until the swap script promotes it to ld+json -->
+  <script type="text/plain" id="ld-event-nov">
+  {
+    "@context": "https://schema.org",
+    "@type": "MusicEvent",
+    "name": "DayFunk featuring Mike Hitman Wilson",
+    "description": "Free daytime House Music party at Eat Street Crossing in Minneapolis. Mike Hitman Wilson (Hot Mix 5 / B96 Mixmasters, Aurora, IL) headlines with support from Nick Gunz, Bad Brass, Lenny Alfonzo, and La-Shon Archibald. Nick Gunz birthday celebration. All ages, no cover.",
+    "image": "https://dayfunk.com/dayfunk-og.jpg",
+    "url": "https://www.facebook.com/events/3051995221810859",
+    "startDate": "2026-11-22T14:00:00-06:00",
+    "endDate": "2026-11-22T20:00:00-06:00",
+    "eventStatus": "https://schema.org/EventScheduled",
+    "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+    "isAccessibleForFree": true,
+    "location": {
+      "@type": "Place",
+      "name": "Eat Street Crossing",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "2819 Nicollet Ave",
+        "addressLocality": "Minneapolis",
+        "addressRegion": "MN",
+        "postalCode": "55408",
+        "addressCountry": "US"
+      }
+    },
+    "performer": [
+      { "@type": "Person", "name": "Mike Hitman Wilson" },
+      { "@type": "Person", "name": "Nick Gunz" },
+      { "@type": "Person", "name": "Bad Brass" },
+      { "@type": "Person", "name": "Lenny Alfonzo" },
+      { "@type": "Person", "name": "La-Shon Archibald" }
+    ],
+    "organizer": {
+      "@type": "Organization",
+      "name": "DayFunk",
+      "url": "https://dayfunk.com"
+    },
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock",
+      "url": "https://www.facebook.com/events/3051995221810859",
+      "validFrom": "2026-10-25T20:00:00-05:00"
     }
   }
   </script>
@@ -452,6 +502,7 @@
       text-decoration: none;
       color: inherit;
     }
+    .event-card[hidden] { display: none; }
 
         .event-card {
       display: grid;
@@ -904,11 +955,12 @@
         </div>
 
         <a class="event-card"
+           id="event-oct"
            href="https://www.facebook.com/events/1627701102317055"
            target="_blank"
            rel="noopener noreferrer"
            aria-label="DayFunk featuring Lego, Sunday October 25 at Eat Street Crossing. Free. View on Facebook."
-           onclick="gtag('event','facebook_event_click',{headliner:document.querySelector('.event-headliner')?.textContent.trim()})">
+           onclick="gtag('event','facebook_event_click',{headliner:this.querySelector('.event-headliner')?.textContent.trim()})">
           <div class="event-date" aria-hidden="true">
             <span class="event-month">Oct</span>
             <span class="event-day">25</span>
@@ -920,6 +972,36 @@
           </div>
           <div class="event-badge"><span class="badge badge-free">Free</span></div>
         </a>
+
+        <a class="event-card"
+           id="event-nov"
+           hidden
+           href="https://www.facebook.com/events/3051995221810859"
+           target="_blank"
+           rel="noopener noreferrer"
+           aria-label="DayFunk featuring Mike Hitman Wilson, Sunday November 22 at Eat Street Crossing. Free. View on Facebook."
+           onclick="gtag('event','facebook_event_click',{headliner:this.querySelector('.event-headliner')?.textContent.trim()})">
+          <div class="event-date" aria-hidden="true">
+            <span class="event-month">Nov</span>
+            <span class="event-day">22</span>
+          </div>
+          <div class="event-info">
+            <h3 class="event-headliner">Mike Hitman Wilson</h3>
+            <p class="event-meta">Hot Mix 5 / B96 Mixmasters &bull; Aurora, IL<br/>Sunday &bull; 2–8pm &bull; All Ages &bull; Nick Gunz Birthday</p>
+            <p class="event-support">Support: Nick Gunz &bull; Bad Brass &bull; Lenny Alfonzo &bull; La-Shon Archibald</p>
+          </div>
+          <div class="event-badge"><span class="badge badge-free">Free</span></div>
+        </a>
+
+        <script>
+          // Swap Oct for Nov at 8pm Central Sun Oct 25 (01:00 UTC Oct 26), same instant for every visitor's clock.
+          if (Date.now() >= Date.UTC(2026, 9, 26, 1, 0, 0)) {
+            document.getElementById('event-oct').remove();
+            document.getElementById('event-nov').hidden = false;
+            document.getElementById('ld-event-oct').remove();
+            document.getElementById('ld-event-nov').type = 'application/ld+json';
+          }
+        </script>
 
         <p class="events-footnote">
           <a href="https://www.facebook.com/profile.php?id=61550852684909"
